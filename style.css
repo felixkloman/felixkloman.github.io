@@ -1880,7 +1880,7 @@ footer {
     align-items: center;       /* horizontally centers the cards */
     justify-content: flex-start;
     padding-top: -5rem;       /* moves content closer to the top */
-    gap: 2.5rem;               /* spacing if you add more cards later */
+    gap: 5rem;               /* spacing if you add more cards later */
     transform: translateX(-30px); /* manual fine-adjustment left */
 }
 #books-content .content-card {
