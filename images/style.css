@@ -1,0 +1,1899 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
+
+body {
+  background-color: #faf3e7; /* soft warm cream tone */
+  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* --- Eclectic Nav --- */
+#main-sections {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  margin-top: 7rem; /* gives your logo breathing space */
+  margin-bottom: 2rem;
+}
+
+
+/* hover animations */
+.section-tab:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 3px 3px 0 #111;
+}
+
+.section-tab:hover {
+  transform: rotate(-1.5deg) scale(1.05);
+}
+
+/* uneven underlines like pen strokes */
+.section-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #e3b500;
+  transform: rotate(-2deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-tab:hover::after {
+  opacity: 1;
+}
+
+
+/* Section content below each tab */
+.section-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  background: #faf9f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeOut 2.5s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.logo-intro {
+  width: 70vw;
+  max-width: 900px;
+  animation: shrink 2.2s ease-in-out forwards;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.3) translateY(-220%);
+  }
+}
+
+.logo-anchor {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.logo {
+  height: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea,
+button {
+  border: 1px solid #111;
+  background: transparent;
+  padding: 0.5rem;
+  font-family: inherit;
+}
+/* === Comments & Recs textarea – solid white === */
+#comments-form textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  resize: none;
+  background-color: #ffffff !important; /* solid white */
+}
+
+/* === Comments & Recs container card – white background === */
+/* === Comments & Recs card (full popup) === */
+#comments-widget form {
+  width: 260px;               /* controls card width */
+  margin: 0.75rem auto 0;     /* centers under "Comments & Recs!" */
+  background-color: #ffffff;
+  border: 1px solid #111;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+
+button:hover {
+  background: #111;
+  color: #faf9f6;
+  transition: 0.2s;
+}
+.logo, .logo-intro {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #111;
+}
+/* --- Now Playing Box --- */
+#now-playing-box {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0.1rem;
+  background-color: #faf9f6;
+background-image: repeating-conic-gradient(
+  from 0deg,
+  rgba(255, 239, 170, 0.25) 0deg 10deg,
+  transparent 10deg 20deg
+);
+@keyframes gentleGlow {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 1; }
+}
+
+#now-playing-box {
+  animation: gentleGlow 6s ease-in-out infinite;
+}
+
+background-size: 200% 200%;
+background-position: center;
+overflow: hidden;
+
+  border: 2px solid #222;
+  border-radius: 14px;
+  padding: 0.6rem 0.8rem;
+  box-shadow: 3px 3px 0px #222;
+  width: 200px;      /* narrower width */
+  height: 130px;     /* shorter height for rectangular shape */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#now-playing-box h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+#now-playing-box iframe {
+  width: 200px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+
+/* warm radial backdrop */
+#now-playing-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 217, 102, 0.3) 0%,
+    rgba(255, 217, 102, 0.15) 30%,
+    transparent 70%
+  );
+  z-index: -2;
+}
+
+/* hand-drawn sunray lines */
+#now-playing-box::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 217, 102, 0.3) 0deg 6deg,
+    transparent 6deg 12deg
+  );
+  z-index: -3;
+  transform: rotate(-10deg);
+  opacity: 0.6;
+  filter: blur(0.3px);
+}
+
+#now-playing-box h3 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+#now-playing-box iframe {
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* slight movement animation for the rays */
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#now-playing-box::after {
+  animation: slowRotate 40s linear infinite;
+}
+/* === Floating Comments Button + Pop-Up === */
+#comments-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 60;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#comments-toggle {
+  background: #111;
+  color: #faf9f6;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#comments-toggle:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* Hidden comment box */
+#comments-box {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 0;
+  background: #faf9f6;
+  border: 1px solid #111;
+  border-radius: 10px;
+  width: 260px;
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  display: none;  /* hidden by default */
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#comments-box textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  resize: none;
+  background: #fff;
+  background-color: #ffffff;
+  opacity: 1;
+
+}
+
+#comments-box button {
+  align-self: flex-end;
+  background: #111;
+  color: #faf9f6;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+#comments-box button:hover {
+  background: #333;
+}
+/* === Floating Comments & Recs (bottom-right) === */
+#comments-widget.comments {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 70; /* above Now Playing */
+}
+
+#comments-widget > summary {
+  list-style: none;
+  background: #faf9f6;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 16px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 2px 3px 0px #222; /* rough hand-drawn depth */
+  transition: all 0.2s ease;
+}
+
+#comments-widget > summary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 4px 0px #222;
+  background: #fff5b7; /* soft warm-yellow tone */
+}
+/* Wiggle animation */
+@keyframes scribbleShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-0.5px, 0.5px) rotate(-0.5deg); }
+  40% { transform: translate(0.5px, -0.5px) rotate(0.5deg); }
+  60% { transform: translate(-0.5px, -0.5px) rotate(0deg); }
+  80% { transform: translate(0.5px, 0.5px) rotate(0.3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#comments-widget > summary:hover {
+  animation: scribbleShake 0.3s ease-in-out infinite;
+  background: #fff5b7; /* soft warm-yellow tone */
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 4px 0px #222;
+}
+#comments-widget > summary {
+  background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9) 0%, #faf9f6 100%);
+}
+
+#comments-widget > summary {
+  position: relative;
+}
+
+#comments-widget > summary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(0,0,0,0.1);
+  transform: translate(2px, 2px);
+  z-index: -1;
+}
+
+#success-message {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 0.7rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+#success-message.show {
+  opacity: 1;
+}
+
+
+#success-message.show {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+/* --- Section Blocks --- */
+.content-block {
+  max-width: 750px;
+  margin: 4rem auto;
+  background: #fffdf8;
+  border: 2px solid #222;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 6px 6px 0px #222;
+  transform: rotate(-0.5deg);
+}
+
+.content-block h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+/* ============ NAV TAB PERSONALITIES ============ */
+
+/* --- Thought Bubble Animation --- */
+#thoughts-tab {
+  font-size: 1.1rem !important; /* force smaller size */
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.1;             /* keeps it vertically tight */
+}
+
+
+
+#thoughts-tab::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 160%;
+  height: 160%;
+  background: url('https://i.imgur.com/XyTzK7V.png') no-repeat center/contain; /* thought bubble png */
+  opacity: 0.6;
+  animation: bubbleFade 3s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes bubbleFade {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.8; transform: scale(1.03); }
+}
+
+/* --- Books + Media (Spinning CD) --- */
+#books-tab {
+  position: relative;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+}
+
+#books-tab::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  width: 160%;
+  height: 160%;
+  background: url('https://i.imgur.com/vjhSvTv.png') no-repeat center/contain; /* cd image */
+  animation: spinCD 6s linear infinite;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@keyframes spinCD {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* ============ NAV TAB BACKGROUND ELEMENTS ============ */
+
+/* General setup so each tab can hold a "background" image behind text */
+.section-tab {
+  position: relative;
+  font-weight: 600;
+  padding: 1rem 1.8rem;
+  text-align: center;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.section-tab::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  opacity: 0.45;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation: none;
+}
+
+/* 🧠 Thoughts — subtle fading bubble */
+#thoughts-tab::before {
+  background-image: url('https://cdn.jsdelivr.net/gh/felixassets/goth-assets/thought-bubble-handdrawn.png');
+  animation: bubbleFade 4s ease-in-out infinite alternate;
+}
+@keyframes bubbleFade {
+  0% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.95); }
+  100% { opacity: 0.55; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* 💿 Books + Media — spinning CD */
+#books-tab::before {
+  background-image: url('https://cdn.jsdelivr.net/gh/felixassets/goth-assets/handdrawn-cd.png');
+  animation: spinCD 8s linear infinite;
+}
+@keyframes spinCD {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 👣 Side Quests — walking footsteps */
+#sidequests-tab::before {
+  background-image: url('https://cdn.jsdelivr.net/gh/felixassets/goth-assets/handdrawn-footsteps.png');
+  background-repeat: repeat-x;
+  animation: walkSteps 10s linear infinite;
+}
+@keyframes walkSteps {
+  0% { background-position-x: 100%; opacity: 0.4; }
+  50% { opacity: 0.2; }
+  100% { background-position-x: -100%; opacity: 0.4; }
+}
+/* ===== NAV ITEM STYLING ===== */
+#main-sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-top: 100px;
+}
+
+.section-tab {
+  position: relative;
+  font-family: 'Comic Neue', sans-serif;
+  font-size: 1.6rem; /* smaller so “THOUGHTS” fits */
+  font-weight: 700;
+  color: #222;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.section-tab:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CLEAR OUT ANY BOX REMNANTS ===== */
+.section-tab::before,
+.section-tab::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ===== IMAGE BACKGROUNDS ===== */
+.nav-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== THOUGHTS (ACTUALLY CENTERED NOW) ===== */
+#thoughts-tab {
+  width: 230px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#thoughts-tab span {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-45px); /* raised more to truly center visually */
+}
+
+#thought-bg {
+  width: 250px;
+  opacity: 0.3;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 4.5s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.45;
+  }
+}
+
+
+
+/* ===== CD (SLIGHTLY SMALLER + SLOW SPIN) ===== */
+#cd-bg {
+  width: 180px; /* slightly smaller so text overlaps edges */
+  opacity: 0.6;
+  animation: spinCD 11s linear infinite;
+  filter: saturate(1.3) brightness(1.05);
+}
+
+@keyframes spinCD {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+
+/* --- SIDE QUESTS Footstep Animation (clean one-by-one walk) --- */
+#sidequests-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sidequests-tab .sidequests-label {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  z-index: 2;
+}
+
+/* track container */
+.footsteps-track {
+  position: absolute;
+  left: 5%;
+  bottom: -7px; /* raise this closer to the text */
+  transform: translateX(-50%);
+  height: 60px;
+}
+
+
+/* individual footprint */
+.footprint {
+  position: absolute !important;
+  width: 22px !important;   /* or 24px — pick what looks right */
+  height: auto !important;
+  opacity: 0;
+  transform: rotate(50deg);
+  animation: stepFade 12s linear infinite;
+}
+
+
+/* alternate up/down slightly for realism */
+.footprint:nth-child(odd) {
+  top: -0px;
+  
+}
+.footprint:nth-child(even) {
+  top: -10px;
+  
+}
+
+/* fade in → hold → fade out */
+@keyframes stepFade {
+  0%, 20% { opacity: 0; }
+  30%, 45% { opacity: 0.9; }
+  55%, 100% { opacity: 0; }
+}
+/* Vintage paper speckle */
+.vintage-overlay{
+  position:fixed; inset:0;
+  pointer-events:none;
+  background-image:url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity:.18;
+  z-index:-1;
+}
+
+/* Celestial object */
+#sky-object {
+  position: fixed;
+  top: -15px;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff4b0, #f4c542);
+  box-shadow: 0 0 30px rgba(255, 220, 100, 0.6);
+  z-index: 10;
+  transition:
+    background 1.2s ease,
+    box-shadow 1.2s ease,
+    left 1s linear;  /* smooth move across top */
+  overflow: hidden;
+}
+
+
+/* Luminous moon look */
+#sky-object.moon {
+  background: radial-gradient(circle at 35% 35%, #c9d4ff 20%, #1a1d3a 85%);
+  box-shadow:
+    0 0 20px rgba(100, 150, 255, 0.4),
+    0 0 50px rgba(80, 120, 255, 0.3),
+    0 0 80px rgba(255, 0, 0, 0.15); /* faint red halo from clock glow */
+  transition:
+    background 1.2s ease,
+    box-shadow 1.2s ease;
+}
+#sky-object {
+  background: radial-gradient(circle at 30% 30%, #fff7b3 10%, #f5c542 90%);
+  box-shadow:
+    0 0 35px rgba(255, 230, 150, 0.6),
+    0 0 80px rgba(255, 210, 100, 0.4);
+}
+
+
+
+/* Digital clock text */
+#sky-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  color: #ff1e1e !important;
+  text-shadow:
+    0 0 4px rgba(255, 50, 50, 1),
+    0 0 10px rgba(255, 20, 20, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.5);
+  letter-spacing: 2px;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;       /* prevents wrapping */
+  width: 100%;               /* keeps the text in one line */
+  text-align: center;
+}
+
+#colon {
+  display: inline-block;
+  width: 0.4em;              /* fixed space to avoid shifting */
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+
+/* Smooth page background tint */
+body {
+  transition: background-color 1s ease;
+}
+#colon {
+  display: inline-block;
+  width: 0.4em; /* keeps spacing consistent */
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+/* --- Note from the House --- */
+#note-container {
+  position: fixed;
+  top: 75px;
+  left: -55px;        /* moved a bit right to give Thoughts breathing room */
+  width: 115px;
+  height: 75px;
+  z-index: 9;
+}
+
+/* Jack Sparrow */
+#jack-sparrow {
+  position: absolute;
+  left: 50px;          /* pull him closer to the note */
+  bottom: -115px;
+  height: 190px;       /* slightly smaller if needed */
+  object-fit: contain;
+  transform: rotate(-2deg);
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+  z-index: 4;          /* now ABOVE the note */
+}
+
+/* Sticky Note */
+#sticky-note {
+  position: absolute;
+  left: 100px;         /* shifted slightly right */
+  top: 10px;           /* minor vertical alignment */
+  width: 160px;        /* smaller */
+  min-height: 190px;   /* smaller vertically */
+  padding: 14px 16px;
+  background: #fff8b3;
+  border: 1px solid #e5da7a;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.25);
+  transform: rotate(1.5deg);
+  font-family: 'Patrick Hand', cursive;
+  font-size: .9rem;
+  z-index: 3;          /* behind Jack */
+}
+
+
+#sticky-note::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: .25;
+  pointer-events: none;
+}
+/* Sticky note layout */
+#sticky-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px; /* pushes content slightly down */
+}
+
+/* Blond-style “WELCOME” */
+.note-welcome {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #000000;               /* pure black */
+  text-transform: uppercase;
+  margin: 4px 0 10px;
+  align-self: center;
+
+  /* restore clean smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  filter: none;
+  opacity: 1;
+}
+
+.note-subtext {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;     /* a touch bigger */
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+.note-quote {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #2a1e00;
+}
+
+
+.note-quote {
+  display: block;
+  font-style: italic;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #2a1e00;
+}
+
+
+
+
+
+/* Subtext (Note from the House) */
+.note-text {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1rem;
+  color: #4a3f0b;
+  margin: 0;
+}
+/* Fade + slide for the whole note */
+@keyframes noteFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(2deg);
+  }
+}
+/* Sticky Note Animation */
+#sticky-note {
+  animation: noteFadeIn 1.4s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0; /* start hidden */
+}
+
+
+
+/* Gentle handwritten fade for the quote */
+@keyframes quoteFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Typewriter effect for quote */
+.note-quote {
+  opacity: 0;
+  animation: wordFade 2.4s ease-out 2.2s forwards;
+}
+
+@keyframes wordFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0.8rem; /* push closer to bottom — tweak this to taste */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: none;
+  border: none;
+  z-index: 10;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem; /* tighter spacing between icons */
+}
+
+.social-icon {
+  font-size: 1.9rem;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+/* Individual icon colors */
+.social-icon i.fa-instagram {
+  color: #e1306c; /* Instagram pink */
+}
+
+.social-icon i.fa-twitter {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+  filter: brightness(1.2);
+}
+/* === Sidebar container === */
+.icon-sidebar {
+  position: fixed;
+  right: 10px;
+  top: 120px;
+  width: 320px;
+  height: 620px;
+  border: 3px solid black;
+  border-radius: 12px;
+  background-color: #ff6b6b;
+  box-sizing: border-box;
+  padding-top: 55px;
+  overflow: hidden; /* IMPORTANT: no scrolling here */
+}
+
+/* === Scrollbar Styling (RIGHT SIDE) === */
+.sidebar-frame::-webkit-scrollbar {
+  width: 16px;
+  background-color: transparent;
+}
+
+.sidebar-frame::-webkit-scrollbar-track {
+  background: #f8f8f8;
+  border-left: 1px solid #b0b0b0;
+  border-radius: 10px;
+}
+
+.sidebar-frame::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+  border: 3px solid #f8f8f8;
+  min-height: 40px;
+}
+
+
+.icon-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #222; /* darker hover */
+}
+
+/* Top and bottom arrow buttons */
+.icon-sidebar::-webkit-scrollbar-button:vertical:start:decrement,
+.icon-sidebar::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+  height: 18px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  border: 1px solid #b0b0b0;
+}
+
+/* Force thumb visibility (this keeps the bar active) */
+.icon-sidebar {
+  overflow-y: scroll;
+}
+/* Container inside the red sidebar */
+.sidebar-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto; /* the ONLY scroll */
+  padding-bottom: 40px;
+}
+
+
+/* Where all the extra blocks live */
+.sidebar-sections {
+  margin-top: 1.5rem;
+  padding: 0 1rem 1.5rem;
+  overflow-y: auto;
+  flex: 1;                /* fills remaining height under collage */
+}
+
+/* Individual blocks */
+.sidebar-block {
+  background: #ffecec;
+  border-radius: 14px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.9rem;
+  border: 2px solid #111;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+/* Titles inside sidebar blocks */
+.sidebar-block-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4rem;
+}
+
+/* Links + text in blocks */
+.sidebar-link,
+.sidebar-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-decoration: none;
+  color: #111;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+
+/* Optional: small image thumb */
+.sidebar-thumb {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+}
+
+
+
+/* === "ICONS" header === */
+.icons-header-inside {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.icons-header-inside h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #000000; /* pitch black */
+  opacity: 1;
+  letter-spacing: 1px;
+}
+
+/* === Inner white collage box (back near top) === */
+.icon-collage-box {
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 260px;
+  height: 500px;
+  background: white;
+  margin: 0 auto;
+  margin-top: -10px; /* brings it right under "ICONS" again */
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* === Collage image styling === */
+.icon {
+  position: absolute;
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.icon:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+/* === Layering order === */
+.fox   { z-index: 4; }
+.walle { z-index: 5; }
+.lance { z-index: 5; }
+.sade  { z-index: 6; }
+.blade { z-index: 7; }
+
+/* === Placements === */
+.frank   { top: -5px;  left: 10px;  transform: rotate(-5deg); }
+.mario   { top: 10px;  left: 120px; transform: rotate(5deg); }
+.jack    { top: 2px;  left: 185px; transform: rotate(-6deg); }
+.kd      { top: 120px;  left: 65px;  transform: rotate(3deg); }
+.uzi     { top: 100px; left: 105px; transform: rotate(-4deg); }
+.sade    { top: 75px; left: 195px; transform: rotate(6deg); }
+.walle   { top: 200px; left: 35px;  transform: rotate(-5deg); }
+.lance   { top: 80px; left: 147px; transform: rotate(4deg); }
+.nolan   { top: 10px;  left: 65px;  transform: rotate(2deg); }
+.blade   { top: 180px; left: 195px; transform: rotate(-7deg); }
+.fox     { top: 135px; left: 0px;   transform: rotate(5deg); }
+/* --- Always-visible scrollbar + arrows --- */
+.icon-sidebar {
+  overflow: hidden; /* always show scrollbar even if not needed */
+}
+
+.icon-sidebar::-webkit-scrollbar-button:vertical:start:decrement,
+.icon-sidebar::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+  height: 16px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  border: 1px solid #b0b0b0;
+}
+
+/* Top box stays the same */
+.icon-collage-box {
+  width: 260px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: -10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Bottom clean box — separate spacing so it doesn’t push top box */
+.empty-lower-box {
+  margin-top: 1.2rem;
+  height: 450px;
+}
+
+
+/* fine-tuned alignment for the 3-section visuals */
+#main-sections {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;              /* space between each element */
+  margin-top: 3.5rem;
+  margin-left: 80px;      /* move entire cluster slightly right */
+  margin-right: 260px;    /* still leave room before sidebar */
+  transform: scale(0.85); /* subtle shrink */
+  transform-origin: center;
+}
+
+/* keep consistent image sizing + hover */
+#main-sections img {
+  width: 185px;           /* smaller than before */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+#main-sections img:hover {
+  transform: scale(1.05);
+}
+
+/* === side quests footprint animation === */
+#sidequests-tab {
+  position: relative;
+  overflow: visible; /* so you can see the prints fully */
+}
+
+/* === Vertical 3-column layout === */
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  width: 100%;
+  min-height: 200vh; /* Tall enough for content */
+}
+
+
+
+.three-column-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  min-height: 200vh;
+  margin-top: -120px; /* pull lines up under the titles */
+  padding-top: 120px; /* keep content in same place */
+}
+/* === PERFECTLY ALIGNED DIVIDER LINES === */
+.divider {
+  position: absolute;
+  top: 275px;
+  height: 3000px;
+  width: 2px;
+  background: #000;
+  z-index: 0;
+}
+
+/* Divider between THOUGHTS and BOOKS */
+#divider-1 {
+  left: calc(50% - 230px);  /* move left or right until centered correctly */
+}
+
+/* Divider between BOOKS and SIDEQUESTS */
+#divider-2 {
+  left: calc(50% + 105px);
+}
+#top-divider {
+  position: absolute;
+  top: 275px;
+  left: calc(50% - 500px);  /* adjust left boundary */
+  width: 1000px;             /* adjust width */
+  height: 2px;
+  background: #000;
+  z-index: 0;
+}
+.section-content {
+  padding-top: 2rem; 
+}
+/* Universal content card */
+.content-card {
+  display: block;
+  width: 90%;
+  max-width: 360px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Thumbnail image */
+.card-thumb {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+/* No-image style */
+.content-card.no-image {
+  padding: 1.4rem 1rem;
+}
+
+/* Title text */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.random-shit-title {
+  position: fixed;
+  right: 4rem;
+  top: 100px;
+  font-size: 26px;
+  font-weight: 900;
+  color: #000;
+  font-style: italic;
+
+  opacity: 0;                        /* start invisible */
+  animation: randomFade 1.2s ease forwards;
+  animation-delay: 1s;               /* adjust delay to match intro */
+
+  margin: 0;
+  z-index: 999999;
+  pointer-events: none;
+  animation-delay: 3s;
+
+}
+@keyframes randomFade {
+  to { opacity: 1; }
+}
+
+.icon-collage-box {
+  margin-top: 3.5rem;   /* adjust this number to move it down */
+}
+.typing {
+  font-style: italic;
+  font-size: inherit;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  padding-right: 6px;
+
+  animation: typing 3.5s steps(15, end) infinite,
+             blink .7s step-end infinite alternate;
+}
+
+/* Type letters out */
+@keyframes typing {
+  0% { width: 0ch; }
+  40% { width: 12ch; }  /* number of characters in "Random Shit" */
+  60% { width: 12ch; }  /* hold fully typed */
+  100% { width: 0ch; }  /* delete */
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0% { border-color: black; }
+  50% { border-color: transparent; }
+}
+.typing {
+  display: inline-block;   /* <-- THIS fixes the left-start typing */
+  font-style: italic;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  padding-right: 6px;
+  font-size: inherit;
+  animation: blink .7s step-end infinite;
+}
+.sidebar-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto; /* the ONLY scroll */
+  padding-bottom: 40px;
+}
+
+.top-collage-box {
+  height: 650px !important;
+}
+
+/* BOTTOM BOX SIZE */
+.lower-collage-box {
+  height: 400px !important;   /* <-- set bottom box height here */
+}
+/* OVERRIDE all previous duplicates */
+.icon-collage-box {
+  width: 260px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Top box */
+.top-collage-box {
+  height: 500px !important;
+  margin-top: 0;
+}
+
+/* Bottom box */
+.lower-collage-box {
+  height: 475px !important;
+  margin-top: 30px;
+}
+/*******************************
+   FIXED SIDEBAR (CLEAN VERSION)
+********************************/
+
+/* === OUTER RED SIDEBAR === */
+.icon-sidebar {
+  position: fixed;
+  right: 10px;
+  bottom: 115px;
+  width: 320px;
+  height: 620px;
+  overflow: hidden;          /* NO scroll on the outer box */
+  border: 3px solid black;
+  border-radius: 12px;
+  background-color: #ff6b6b;
+  box-sizing: border-box;
+  padding-top: 55px;
+}
+
+
+/* === SCROLL AREA (ALL CONTENT LIVES HERE) === */
+.sidebar-frame {
+  height: 100%;
+  overflow-y: auto;   /* ONLY the inner frame scrolls */
+  overflow-x: hidden;
+  padding: 0 1.2rem 40px 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;          /* spacing between elements */
+}
+
+/* Beautiful smooth scrollbar */
+.sidebar-frame::-webkit-scrollbar {
+  width: 14px;
+}
+
+.sidebar-frame::-webkit-scrollbar-track {
+  background: #fafafa;
+  border-left: 1px solid #b0b0b0;
+}
+
+.sidebar-frame::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+  border: 3px solid #fafafa;
+}
+
+
+/*******************************
+   TITLES INSIDE SIDEBAR
+********************************/
+
+.random-shit-title {
+  position: fixed;
+  right: 4rem;
+  top: 70px;
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic;
+  color: black;
+  margin: 0;
+  z-index: 99999;
+}
+
+.sidebar-section-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: -10px 0 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*******************************
+   COLLAGE BOXES
+********************************/
+
+/* UNIVERSAL BOX RULES */
+.icon-collage-box {
+  width: 260px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TOP BOX */
+.top-collage-box {
+  height: 650px !important;
+  margin-top: 0;
+}
+
+/* BOTTOM BOX */
+.lower-collage-box {
+  height: 475px !important;
+  margin-top: 0px;
+}
+
+/*******************************
+   ICONS TITLE
+********************************/
+
+.icons-header-inside {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.icons-header-inside h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: black;
+  letter-spacing: 1px;
+}
+
+
+/*******************************
+   TYPEWRITER EFFECT (UNCHANGED)
+********************************/
+
+.typing {
+  display: inline-block;
+  font-style: italic;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  padding-right: 6px;
+  font-size: inherit;
+  animation: blink .7s step-end infinite;
+}
+
+@keyframes blink {
+  0% { border-color: black; }
+  50% { border-color: transparent; }
+}
+/* ===== FINAL SIDEBAR OVERRIDES – DO NOT MOVE BELOW THIS LINE ===== */
+
+/* 1. Sidebar: fixed size, scrolls inside */
+.icon-sidebar {
+  position: fixed;
+  right: 10px;
+  bottom: 115px;
+  width: 320px;
+  height: 620px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  background-color: #ff6b6b;
+  box-sizing: border-box;
+  padding-top: 55px;
+  overflow-y: auto !important;   /* make THIS the scroll container */
+  overflow-x: hidden !important;
+}
+
+/* 2. Inner wrapper: just holds content, no own height */
+.sidebar-frame {
+  display: block !important;
+  height: auto !important;
+}
+
+/* 3. Boxes: force the heights we actually want */
+.icon-collage-box.top-collage-box {
+  height: 650px !important;
+  margin-top: 40px !important;   /* space under "ICONS" */
+}
+
+.icon-collage-box.lower-collage-box {
+  height: 475px !important;
+  margin-top: 0px !important;
+}
+/* ===== FINAL SIDEBAR FIX – OVERRIDES ===== */
+
+/* Make the red sidebar the scroll container */
+.icon-sidebar {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+
+/* Make the inner wrapper NOT flex so content can be full height */
+.sidebar-frame {
+  display: block !important;
+  height: auto !important;
+}
+
+/* Force the box heights you actually want */
+.icon-collage-box.top-collage-box {
+  height: 260px !important;
+  margin-top: 0px !important;
+}
+
+.icon-collage-box.lower-collage-box {
+  height: 400px !important;
+  margin-top: 10px !important;
+}
+/* === FIX TITLE PLACEMENT ABOVE LOWER BOX === */
+.sidebar-section-title {
+  margin-top: 20px !important;   /* moves title DOWN a bit */
+  margin-bottom: 10px !important; /* pulls lower box closer to title */
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Ensure lower box sits directly under title */
+.lower-collage-box {
+  margin-top: 0px !important;  /* remove huge gap */
+}
+.future-house-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;   /* LEFT–RIGHT spacing */
+  row-gap: 15px;      /* UP–DOWN spacing → increase this to drop bottom images */
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.future-house-grid img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #000;
+}
+.fh-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fh-label {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+.extra-title {
+  margin-top: 30px;      /* adjust this number to move title up/down */
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+.hoops-video-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.hoops-video iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+.intro-logo {
+  width: 55vw;               /* size on screen */
+  max-width: 600px;          /* prevents it from being too big */
+  animation: introShrink 2.2s ease-in-out forwards;
+}
+
+@keyframes introShrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.3) translateY(-220%);
+  }
+}
+.logo-anchor .logo-intro {
+  font-size: 3rem;     /* increase this number for larger text */
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#sticky-note-instructions {
+  position: absolute;
+  left: 80px;
+  top: 290px;
+
+  width: 165px;
+  min-height: 135px;
+
+  padding: 14px 14px;
+
+  background: #d6f7ff;
+  border: 2px solid #4fa3c6;                /* hand-drawn style border */
+  border-radius: 10px;                      /* softer shape */
+  transform: rotate(-2.5deg);               /* more natural tilt */
+  box-shadow: 3px 5px 0px rgba(0,0,0,0.25);  /* chunky cartoon shadow */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+
+  /* paper texture */
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.instruction-text {
+  margin: 0;
+  font-family: 'Gloria Hallelujah', cursive;  /* handwritten but clean */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #000;
+}
+/* === Floating Mouse Animation Around Sticky Note === */
+#mouse-orbit {
+  position: absolute;
+  width: 32px; 
+  height: 32px;
+  opacity: 0.75;
+  animation: orbitMouse 6s linear infinite;
+  pointer-events: none;  /* prevent blocking clicks */
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
+}
+
+
+/* === Floating Pixel Cursor Around Sticky Note === */
+
+
+
+#cursor-orbit {
+  position: absolute;
+  width: 22px;
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: cursorFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.25));
+}
+
+@keyframes cursorFloat {
+  0%   { transform: translate(-70px, -70px) rotate(0deg); }
+  25%  { transform: translate(70px, -30px) rotate(10deg); }
+  50%  { transform: translate(60px, 90px) rotate(-5deg); }
+  75%  { transform: translate(-80px, 80px) rotate(5deg); }
+  100% { transform: translate(-70px, -70px) rotate(0deg); }
+}
+/* === Two white boxes side by side === */
+.two-box-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.white-box {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 12px;
+  min-height: 120px;      /* adjust as needed */
+  box-shadow: 2px 3px 0px #000;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white-box {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 18px;               /* more breathing room */
+  min-height: 140px;           /* taller for quotes */
+  box-shadow: 2px 3px 0px #000;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+.three-column-layout {
+  transform: translateX(-40px);
+}
+
+
+#thoughts-content {
+  margin-top: -40px;      /* was likely much larger before */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* centers horizontally */
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers cards in each column */
+  gap: 30px;             /* nice spacing between future cards */
+}
+#thoughts-content .content-card {
+  margin-left: -20px;
+}
+#divider-0 {
+  position: absolute;
+  top: 275px;            /* same as other dividers */
+  bottom: 0;
+  width: 2px;
+  background-color: black;
+  left: calc(50% - 500px);   /* adjust this value for perfect alignment */
+  z-index: 1;
+}
+/* Books + Media column layout */
+#books-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* horizontally centers the cards */
+    justify-content: flex-start;
+    padding-top: -5rem;       /* moves content closer to the top */
+    gap: 5rem;               /* spacing if you add more cards later */
+    transform: translateX(-30px); /* manual fine-adjustment left */
+}
+#books-content .content-card {
+    margin-top: -4rem; /* adjust this number to move it up or down */
+}
+
+
+/* ---- SIDE QUESTS CONTENT LAYOUT ---- */
+#sidequests-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centers cards horizontally */
+    margin-top: -3rem;       /* pull it up closer to the top */
+    gap: 2rem;               /* spacing if you add more cards later */
+    transform: translateX(-10px); /* tiny shift left to match GitHub rendering */
+}
