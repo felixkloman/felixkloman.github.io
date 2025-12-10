@@ -1873,17 +1873,17 @@ footer {
   left: calc(50% - 500px);   /* adjust this value for perfect alignment */
   z-index: 1;
 }
+/* Books + Media column layout */
 #books-content {
     display: flex;
     flex-direction: column;
-    align-items: center;        /* centers horizontally */
+    align-items: center;       /* horizontally centers the cards */
     justify-content: flex-start;
-    padding-top: 2rem;          /* how far from the top */
-    width: 100%;
+    padding-top: 1.5rem;       /* moves content closer to the top */
+    gap: 2.5rem;               /* spacing if you add more cards later */
+    transform: translateX(-10px); /* manual fine-adjustment left */
 }
-#books-content .content-card {
-    margin: 0 auto;             /* PERFECT universal centering */
-}
+
 
 /* ---- SIDE QUESTS CONTENT LAYOUT ---- */
 #sidequests-content {
