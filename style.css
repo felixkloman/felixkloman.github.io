@@ -1884,7 +1884,7 @@ footer {
     transform: translateX(-30px); /* manual fine-adjustment left */
 }
 #books-content .content-card {
-    margin-top: -5rem; /* adjust this number to move it up or down */
+    margin-top: -4rem; /* adjust this number to move it up or down */
 }
 
 
