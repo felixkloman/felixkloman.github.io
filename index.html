@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Out The House</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+
+  <body>
+   <div class="intro">
+  <img src="images/logo1.png" class="intro-logo" alt="Site Logo">
+</div>
+
+
+    <header class="logo-anchor">
+  <h1 class="logo-intro">GET OUT THE HOUSE</h1>
+</header>
+
+
+
+
+     <!-- Top Navigation Sections -->
+<nav id="main-sections">
+  <div class="section-tab" id="thoughts-tab">
+    <img src="images/thought.webp" class="nav-bg" id="thought-bg">
+    THOUGHTS
+  </div>
+
+  <div class="section-tab" id="books-tab">
+    <img src="images/cd.webp" class="nav-bg" id="cd-bg">
+    BOOKS + MEDIA
+  </div>
+
+  <div class="section-tab" id="sidequests-tab">
+  <div class="footsteps-track" aria-hidden="true"></div>
+  <span class="sidequests-label">SIDE QUESTS</span>
+</div>
+
+ 
+
+
+
+</nav>
+
+<div id="note-container">
+  <img id="jack-sparrow" src="./images/sparrow.PNG" alt="Jack Sparrow">
+  <div id="sticky-note">
+  <h2 class="note-welcome">WELCOME</h2>
+  <p class="note-subtext">
+    Thank you for checking out this slice of my brain.<br>
+    <span class="note-quote">"Not all treasure is silver and gold mate."</span>
+  </p>
+</div>
+<div id="sticky-note-instructions">
+    <img id="cursor-orbit" src="./images/cursor.png" alt="cursor">
+
+    <p class="instruction-text">
+        Click any image or title in the main sections to see full content
+    </p>
+</div>
+
+
+</div>
+
+
+
+<main id="main-content" class="three-column-layout">
+
+  <!-- LEFT COLUMN — THOUGHTS -->
+  <section id="thoughts-content" class="section-content">
+
+      <a href="pdfs/EgoandHarryPotter.pdf" target="_blank" class="content-card">
+          <img src="images/voldemort.jpeg" class="card-thumb" alt="Ego and Harry Potter Cover">
+          <h3 class="card-title">Framing My Ego Through the Lens of Voldemort</h3>
+      </a>
+
+  </section>
+
+  <!-- MIDDLE COLUMN — BOOKS -->
+  <section id="books-content" class="section-content">
+      <!-- Content cards will go here -->
+  </section>
+
+  <!-- RIGHT COLUMN — SIDE QUESTS -->
+  <section id="sidequests-content" class="section-content">
+      <!-- Content goes here -->
+  </section>
+
+</main>
+
+<!-- Horizontal divider line -->
+<div id="top-divider"></div>
+
+<!-- Vertical Dividers -->
+<div class="divider" id="divider-0"></div>
+<div class="divider" id="divider-1"></div>
+<div class="divider" id="divider-2"></div>
+
+
+    <script src="main.js"></script>
+
+<!-- Floating Now Playing Box -->
+<div id="now-playing-box">
+  <h3>Now Playing :</h3>
+  <iframe 
+    src="https://open.spotify.com/embed/track/0nAZGkBGKQCXyaoSJfRhC1?utm_source=generator"
+    width="220" height="220" frameborder="0" allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</div>
+
+<!-- Floating Comments & Recs (no-JS version) -->
+<details id="comments-widget" class="comments">
+  <summary>Comments & Recs!</summary>
+
+  <form id="comments-form" action="https://formspree.io/f/xrbonoev" method="post">
+    <textarea
+      name="message"
+      placeholder="Drop your thoughts or recommendations..."
+      rows="5"
+      required
+    ></textarea>
+    <button type="submit">Send</button>
+    <p id="success-message" class="hidden">Your Input Is Valued</p>
+  </form>
+</details>
+
+<div id="sky-object">
+  <span id="sky-time">
+    <span id="hours"></span><span id="colon">:</span><span id="minutes"></span>
+  </span>
+</div>
+<div class="vintage-overlay"></div>
+
+<div class="vintage-overlay"></div>
+
+<script src="sky.js"></script>
+<footer>
+  <div class="social-links">
+    <a href="https://www.instagram.com/lixstayslit?igsh=b3Z6aGhxbGx3Mnpy" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/lixstayslit?s=21" target="_blank" class="social-icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+</footer>
+
+<h2 class="random-shit-title">
+  <span class="typing"></span>
+</h2>
+
+
+
+<div class="icon-sidebar">
+  <div class="sidebar-frame">
+    <div class="icons-header-inside">
+      <h2>ICONS</h2>
+    </div>
+
+    <div class="icon-collage-box top-collage-box">
+      <div class="icon-wall">
+        <img src="./images/frank.png" alt="Frank Ocean" class="icon frank">
+        <img src="./images/balotelli.png" alt="Mario Balotelli" class="icon mario">
+        <img src="./images/jack.png" alt="Jack Sparrow" class="icon jack">
+        <img src="./images/kd.png" alt="Kevin Durant" class="icon kd">
+        <img src="./images/uzi.png" alt="Lil Uzi Vert" class="icon uzi">
+        <img src="./images/sade.png" alt="Sade" class="icon sade">
+        <img src="./images/walle.png" alt="WALL·E" class="icon walle">
+        <img src="./images/lance.png" alt="Lance Stephenson" class="icon lance">
+        <img src="./images/nolan.png" alt="Christopher Nolan" class="icon nolan">
+        <img src="./images/blade.png" alt="Ryan Gosling" class="icon blade">
+        <img src="./images/fox.png" alt="Fantastic Mr. Fox" class="icon fox">
+      </div>
+        
+    <!-- PUT WHATEVER YOU WANT IN HERE -->
+</div>
+<div class="sidebar-section-title">
+  THINGS I WANT IN MY FUTURE HOUSE
+</div>
+
+<div class="icon-collage-box lower-collage-box">
+  <div class="future-house-grid">
+
+    <div class="fh-item">
+      <img src="./images/dunecouch.jpg" alt="Dune Couch">
+      <p class="fh-label">Dune Couch</p>
+    </div>
+
+    <div class="fh-item">
+      <img src="./images/ovosnow.png" alt="OVO Snow Globe">
+      <p class="fh-label">Ovo Snow Globe</p>
+    </div>
+
+    <div class="fh-item">
+      <img src="./images/painting.jpeg" alt="Painting">
+      <p class="fh-label">Life size oil painted self portrait</p>
+    </div>
+
+    <div class="fh-item">
+      <img src="./images/sunken.JPG" alt="Sunken Living Room">
+      <p class="fh-label">Sunken Living Room / conversation pit</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="sidebar-section-title extra-title">
+  REAL MF HOOPS
+</div>
+<div class="hoops-video-section">
+
+  <div class="hoops-video">
+    <iframe src="https://www.youtube.com/embed/xNEu9X9HRcs?si=Tpm5fqj7qY4heWyN" 
+            allowfullscreen></iframe>
+  </div>
+
+  <div class="hoops-video">
+    <iframe src="https://www.youtube.com/embed/YOd-rT-z23k?si=tLa6o5JGKFrB73CC"
+            allowfullscreen></iframe>
+
+  </div>
+
+  <div class="hoops-video">
+    <iframe src="https://www.youtube.com/embed/6QChvSTz76E?si=jGn4QpDjU97vk0gP" 
+            allowfullscreen></iframe>
+  </div>
+<div class="sidebar-section-title extra-title">
+  Reminders on my lock screen
+</div>
+
+<div class="two-box-row">
+  <div class="white-box">
+    “I don't need to force myself into alignment; the way is already moving through me. Nothing needs to be perfected — only witnessed.”
+  </div>
+
+  <div class="white-box">
+    “Approach my mind, others, and nature with humor and lightness.”
+  </div>
+</div>
+
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
