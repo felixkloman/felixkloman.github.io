@@ -1897,3 +1897,11 @@ footer {
     gap: 2rem;               /* spacing if you add more cards later */
     transform: translateX(-10px); /* tiny shift left to match GitHub rendering */
 }
+.sidebar-section-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 1;
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
