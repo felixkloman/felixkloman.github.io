@@ -1905,3 +1905,21 @@ footer {
   margin-top: -10px;
   margin-bottom: -5px;
 }
+
+.white-box.long-text {
+  display: block;          /* turn OFF flex */
+  text-align: left;
+  align-items: unset;
+  justify-content: unset;
+  line-height: 1.55;
+}
+
+.white-box.long-text strong {
+  color: #000;          /* darker than body text */
+  font-weight: 800;     /* heavier emphasis */
+}
+
+.white-box.long-text strong {
+  font-weight: 1100;
+  display: inline-block;
+}
