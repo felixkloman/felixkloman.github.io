@@ -1288,7 +1288,7 @@ footer {
 .divider {
   position: absolute;
   top: 275px;
-  height: 3000px;
+  height: 5500px;
   width: 2px;
   background: #000;
   z-index: 0;
