@@ -163,7 +163,7 @@ const picks = [
 
 {
 date: "3.7.26",
-bet: "Stuttgard ML",
+bet: "Stuttgard (Bundesliga) ML",
 odds: "-105",
 units: 5,
 result: "pending"
