@@ -177,7 +177,7 @@ const latest = picks[0];
 
 document.getElementById("pick-bet").textContent = latest.bet;
 document.getElementById("pick-odds").textContent =
-`${latest.odds} • ${latest.date}`;
+`${latest.odds} • ${latest.units}u`;
 
 let wins = 0;
 let losses = 0;
