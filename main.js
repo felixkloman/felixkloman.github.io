@@ -156,3 +156,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeLoop();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const picks = [
+
+{
+date: "3.7.26",
+bet: "Stuttgard ML",
+odds: "-105",
+units: 5,
+result: "pending"
+},
+
+
+
+];
+
+const latest = picks[0];
+
+document.getElementById("pick-bet").textContent = latest.bet;
+document.getElementById("pick-odds").textContent =
+`${latest.odds} • ${latest.date}`;
+
+let wins = 0;
+let losses = 0;
+let units = 0;
+
+picks.forEach(p => {
+
+if (p.result === "win") {
+wins++;
+
+if (p.odds.startsWith("+")) {
+units += parseInt(p.odds) / 100;
+} else {
+units += 100 / Math.abs(parseInt(p.odds));
+}
+
+}
+
+if (p.result === "loss") {
+losses++;
+units -= p.units;
+}
+
+});
+
+document.getElementById("pick-record").textContent =
+`${wins}-${losses}`;
+
+document.getElementById("pick-units").textContent =
+`${units.toFixed(2)}u`;
+
+// Last 5 results
+const last5 = picks
+  .filter(p => p.result !== "pending")
+  .slice(0, 5)
+  .map(p => {
+    if (p.result === "win") return "W";
+    if (p.result === "loss") return "L";
+    if (p.result === "push") return "P";
+  })
+  .join(" ");
+
+document.getElementById("pick-last5").textContent = last5 || "-";
+
+});

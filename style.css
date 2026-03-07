@@ -1923,3 +1923,80 @@ footer {
   font-weight: 1100;
   display: inline-block;
 }
+
+/* ===== DAILY PICK TICKET ===== */
+
+#daily-pick-ticket {
+  position: absolute;
+  top: 270px;
+  left: 65px;
+  min-height: 195px;
+  width: 185px;
+  background: #fdfbf4;
+  border: 2px solid #111;
+  border-radius: 12px;
+  box-shadow: 3px 4px 0 #111;
+  padding: 16px 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transform: rotate(-1deg);
+  z-index: 20;
+}
+
+.ticket-header {
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.ticket-main {
+
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.ticket-bet {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.ticket-odds {
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.ticket-divider {
+
+  border-top: 1px dashed #111;
+  margin: 10px 0;
+
+}
+
+.ticket-row { 
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+#pick-record,
+#pick-units,
+#pick-status {
+
+  font-weight: 700;
+
+}
+
+.status-win {
+  color: green;
+}
+
+.status-loss {
+  color: red;
+}
+
+.status-pending {
+  color: #444;
+}
