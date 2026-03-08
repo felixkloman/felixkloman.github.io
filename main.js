@@ -162,11 +162,19 @@ document.addEventListener("DOMContentLoaded", () => {
 const picks = [
 
 {
-date: "3.7.26",
-bet: "Stuttgard (Bundesliga) ML",
-odds: "-105",
+date: "3.8.26",
+bet: "Celtics ML",
+odds: "-109",
 units: 5,
 result: "pending"
+},
+
+{
+date: "3.7.26",
+bet: "Stuttgard ML",
+odds: "-105",
+units: 5,
+result: "loss"
 },
 
 
