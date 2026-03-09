@@ -162,6 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const picks = [
 
 {
+date: "3.9.26",
+bet: "Knicks/Clippers Under 220.5",
+odds: "-108",
+units: 1,
+result: "pending"
+},
+
+{
 date: "3.8.26",
 bet: "Celtics ML",
 odds: "-109",
