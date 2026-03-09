@@ -202,14 +202,13 @@ let units = 0;
 picks.forEach(p => {
 
 if (p.result === "win") {
-wins++;
+  wins++;
 
-if (p.odds.startsWith("+")) {
-units += parseInt(p.odds) / 100;
-} else {
-units += 100 / Math.abs(parseInt(p.odds));
-}
-
+  if (p.odds.startsWith("+")) {
+    units += (parseInt(p.odds) / 100) * p.units;
+  } else {
+    units += (100 / Math.abs(parseInt(p.odds))) * p.units;
+  }
 }
 
 if (p.result === "loss") {
