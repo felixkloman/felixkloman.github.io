@@ -161,12 +161,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const picks = [
 
+
+{
+date: "3.30.26",
+bet: "Cektics ML",
+odds: "-104",
+units: 5,
+result: "pending"
+},
+
 {
 date: "3.16.26",
 bet: "Lakers ML",
 odds: "+128",
 units: 1,
-result: "pending"
+result: "win"
 },
 
 {
