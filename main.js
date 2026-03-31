@@ -163,11 +163,19 @@ const picks = [
 
 
 {
+date: "3.31.26",
+bet: "Suns ML",
+odds: "+108",
+units: 2.5,
+result: "loss"
+},
+
+{
 date: "3.30.26",
-bet: "Cektics ML",
+bet: "Celtics ML",
 odds: "-104",
 units: 5,
-result: "pending"
+result: "loss"
 },
 
 {
